@@ -5,6 +5,7 @@ var prices = []; // Separate global array for prices
 function addBook(title, author, year, price) {
     if (title === "The Catcher in the Rye" && author === "J.D. Salinger" && year === 1951) {
         books.push("Book1");
+        console.log('books ', books);
         prices.push(price);
     } else if (title === "To Kill a Mockingbird" && author === "Harper Lee" && year === 1960) {
         books.push("Book2");
@@ -60,10 +61,18 @@ function totalValue() {
     return total;
 }
 
-addBook("The Catcher in the Rye", "J.D. Salinger", 1951, 9.99);
-addBook("To Kill a Mockingbird", "Harper Lee", 1960, 7.99);
+module.exports = {
+    addBook,
+    isInStock,
+    totalValue,
+    books,
+    prices
+}
 
-console.log(isInStock("Book1")); // Should return true
-console.log(isInStock("Book5")); // Should return false
+// addBook("The Catcher in the Rye", "J.D. Salinger", 1951, 9.99);
+// addBook("To Kill a Mockingbird", "Harper Lee", 1960, 7.99);
 
-console.log("Total value of inventory: $" + totalValue());
+// console.log(isInStock("Book1")); // Should return true
+// console.log(isInStock("Book5")); // Should return false
+
+// console.log("Total value of inventory: $" + totalValue());
