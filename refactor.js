@@ -15,7 +15,6 @@ function addBook(title, author, year, price) {
     }
     books[title] = book;
     prices.push(price);
-    console.log(title);
 }
 
 function isInStock(title) {
@@ -32,9 +31,7 @@ function totalValue() {
 
 function removeBook(title) {
     if (isInStock(title)) {
-        console.log('asjsa ', books);
         delete books[title];
-        console.log('asjsa baad', books);
     }
 }
 
