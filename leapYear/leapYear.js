@@ -5,10 +5,7 @@ function isLeapYear(year) {
   if (isNumDivisibleBy(year, 100)) {
     return false;
   }
-  if (isNumDivisibleBy(year, 4)) {
-    return true;
-  }
-  return false;
+  return isNumDivisibleBy(year, 4);
 }
 
 function isNumDivisibleBy(num, divider) {
